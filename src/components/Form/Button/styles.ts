@@ -1,6 +1,6 @@
 import { RFValue } from 'react-native-responsive-fontsize';
 import { RectButton } from 'react-native-gesture-handler';
-import themes from '../../../global/styles/themes';
+import themes from '../../../global/styles/theme';
 import styled from 'styled-components/native';
 
 export const Container = styled(RectButton)`

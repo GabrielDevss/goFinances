@@ -4,7 +4,7 @@ import { BorderlessButton } from 'react-native-gesture-handler';
 import { Feather } from "@expo/vector-icons";
 import { FlatList } from 'react-native'; 
 
-import themes from "../../global/styles/themes";
+import themes from "../../global/styles/theme";
 import styled from "styled-components/native";
 
 import { DataListProps } from '.';
@@ -101,6 +101,10 @@ export const TransactinList = styled(
   contentContainerStyle: { 
     paddingBottom: getBottomSpace()
   }
-})`
-  
+})``;
+
+export const LoadContainer = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 `;

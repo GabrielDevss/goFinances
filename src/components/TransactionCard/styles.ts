@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components/native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { Feather } from '@expo/vector-icons';
-import themes from '../../global/styles/themes';
+import themes from '../../global/styles/theme';
 
 interface TransactionProps {
   type: 'positive' | 'negative';

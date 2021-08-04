@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
 import { RFValue } from 'react-native-responsive-fontsize';
-import themes from '../../../global/styles/themes';
+import themes from '../../../global/styles/theme';
 
 interface TypeProps {
   type: 'up' | 'down';
