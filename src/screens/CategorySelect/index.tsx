@@ -8,7 +8,6 @@ import {
   Icon, 
   Name,
   Separator,
-  Footer,
 } from "./styles";
 import { Button } from "../../components/Form/Button";
 import { categories } from "../../Utils/categories";
@@ -32,7 +31,9 @@ export function CategorySelect({
 
   function handleCategorySelect(category: Category) {
     setCategory(category);
+    closeSelectCategory();
   }
+
 
   return (
     <Container>
@@ -53,15 +54,8 @@ export function CategorySelect({
             <Name>{item.name}</Name>
           </Category>
         )}
-        ItemSeparatorComponent={Separator}
+        ItemSeparatorComponent={() => <Separator />}
       />
-
-      <Footer>
-        <Button 
-          title="Selecionar"
-          onPress={closeSelectCategory}
-        />
-      </Footer>
     </Container>
   );
 }
