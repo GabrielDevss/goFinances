@@ -56,3 +56,4 @@ export const FooterWapper = styled.View`
 
   justify-content: space-between;
 `;
+

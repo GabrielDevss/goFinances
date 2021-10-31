@@ -24,6 +24,7 @@ import { RFValue } from 'react-native-responsive-fontsize';
 
 import AsyncStorage  from '@react-native-async-storage/async-storage';
 import { ActivityIndicator } from 'react-native';
+import { useAuth } from '../../Hooks/auth';
 
 interface TransactionData {
   type: 'positive' | 'negative';
@@ -47,6 +48,8 @@ export function Resume() {
   const [isLoading, setIsLoading ] = useState(false);
   const [ totalByCategories, setTotalByCategories ] = useState<CategoryData[]>([]);
   const [ selectedDate, setSelectedDate ] = useState(new Date());
+  
+  const { user } = useAuth();
 
   const themes = useTheme();
 
@@ -60,7 +63,7 @@ export function Resume() {
 
   async function loadData() {
     setIsLoading(true);
-    const datakey = '@gofinances:transactions';
+    const datakey = `@gofinances:transactions_user:${user.id}`;
     const response = await AsyncStorage.getItem(datakey);
     const responseFormatted = response ? JSON.parse(response) : [];
   
